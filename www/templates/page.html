@@ -10,12 +10,19 @@
           {{ item.name }}
           <i class="icon ion-chevron-right"></i>
         </ion-item>
+        <ion-item data-ng-if="main.nowPlaying.title"
+          ui-sref="page.now-playing"" menu-close class="item-icon-right">
+          {{ main.nowPlaying.title }}
+          <i class="icon ion-chevron-right"></i>
+        </ion-item>
       </ion-list>    
     </ion-side-menu>
     
     <ion-side-menu-content>
 
       <ion-nav-bar class="bar bar-header bar-calm">
+        <ion-nav-back-button class="button-icon button-clear ion-arrow-left-c">
+        </ion-nav-back-button>
         <ion-nav-buttons side="left">
           <button data-ng-click="main.toggleLeft()"
             class="button button-clear icon ion-navicon">
@@ -36,8 +43,9 @@
         <button ui-sref="page.home" 
           class="button button-clear icon ion-home">
         </button>
-        <button data-ng-if="main.nowPlaying.title" 
-          class="button button-clear icon-right ion-chevron-right">
+        <button data-ng-if="main.nowPlaying.title && main.$state.current.name !== 'page.now-playing'" 
+          class="button button-clear icon-right ion-chevron-right"
+          ui-sref="page.now-playing">
           {{ main.nowPlaying.title }}
         </button>
       </div>

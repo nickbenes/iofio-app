@@ -1,9 +1,11 @@
 angular.module('iofio.controllers', [])
 
-  .controller('MainCtrl', function ($ionicSideMenuDelegate) {
+  .controller('MainCtrl', function ($ionicSideMenuDelegate, $state) {
     this.toggleLeft = function () {
       $ionicSideMenuDelegate.toggleLeft();
     }
+
+    this.$state = $state;
 
     this.nowPlaying = {
       title: null,

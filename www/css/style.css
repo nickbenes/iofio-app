@@ -1,1 +1,6 @@
-/* Empty. Add your own CSS if you like */
+.media-controls {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+}
