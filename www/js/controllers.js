@@ -7,8 +7,8 @@ angular.module('iofio.controllers', [])
 
     this.$state = $state;
 
-    this.nowPlaying = {
-      title: null,
+    this.player = {
+      title: "Polygon Longform: A podcast episode",
       src: null,
       position: null,
       duration: null,

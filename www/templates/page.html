@@ -43,10 +43,10 @@
         <button ui-sref="page.home" 
           class="button button-clear icon ion-home">
         </button>
-        <button data-ng-if="main.nowPlaying.title && main.$state.current.name !== 'page.now-playing'" 
+        <button data-ng-if="main.player.title && main.$state.current.name !== 'player'" 
           class="button button-clear icon-right ion-chevron-right"
-          ui-sref="page.now-playing">
-          {{ main.nowPlaying.title }}
+          ui-sref="player">
+          {{ main.player.title }}
         </button>
       </div>
       

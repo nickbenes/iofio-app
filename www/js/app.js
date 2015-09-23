@@ -64,9 +64,9 @@ angular.module('iofio', ['ionic','ionic.service.core', 'iofio.controllers', 'iof
       templateUrl: 'templates/settings.html'
     })
     
-    .state('page.now-playing', {
-      url: '/now-playing',
-      templateUrl: 'templates/now-playing.html'
+    .state('player', {
+      url: '/player',
+      templateUrl: 'templates/player.html'
     })
     
   // if none of the above states are matched, use this as the fallback
