@@ -10,6 +10,48 @@
   text-align: left;
 }
 
+.iofio-modal-grid, 
+.iofio-modal-grid .scroll-content,
+.iofio-modal-grid .scroll {
+  height: 100%;
+}
+
+.iofio-row-50 {
+  height: 50%;
+}
+
+.iofio-row-50 .col {
+  height: 100%;
+}
+
+.iofio-grid-button {
+  background: darkslategray;
+  text-align: center;
+  color: white;
+  height: 100%;
+}
+
+.iofio-grid-button > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.iofio-grid-button .iofio-grid-icon {
+  height: 80%;
+  font-size: 108px;
+  font-weight: 800;
+  padding-top: 48px;
+}
+
+.iofio-grid-button .iofio-grid-label {
+  height: 20%;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 10px;
+}
+
 .player-title {
   font-weight: 500 !important;
 }

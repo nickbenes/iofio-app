@@ -1,5 +1,36 @@
 <ion-modal-view>
-  <ion-content>
-    Home modal
+  <!--ion-header-bar class="bar-stable bar-translucent">
+    <button side="right" class="button button-clear icon-right ion-close" ng-click="closeHome()">
+    </button>
+  </ion-header-bar-->
+  <ion-content class="iofio-modal-grid">
+      <div class="row iofio-row-50">
+        <div class="col" ui-sref="page.playlist" ng-click="closeHome()">
+          <div class="iofio-grid-button">
+            <div class="iofio-grid-icon"><i class="icon ion-radio-waves"></i></div>
+            <div class="iofio-grid-label">My Podcasts</div>
+          </div>
+        </div>
+        <div class="col" ui-sref="page.player" ng-click="closeHome()">
+          <div class="iofio-grid-button">
+            <div class="iofio-grid-icon"><i class="icon ion-play"></i></div>
+            <div class="iofio-grid-label">Player</div>
+          </div>
+        </div>
+      </div>
+      <div class="row iofio-row-50">
+        <div class="col" ui-sref="page.donations" ng-click="closeHome()">
+          <div class="iofio-grid-button">
+            <div class="iofio-grid-icon"><i class="icon ion-social-usd"></i></div>
+            <div class="iofio-grid-label">Donations</div>
+          </div>
+        </div>
+        <div class="col" ui-sref="page.settings" ng-click="closeHome()">
+          <div class="iofio-grid-button">
+            <div class="iofio-grid-icon"><i class="icon ion-gear-a"></i></div>
+            <div class="iofio-grid-label">Settings</div>
+          </div>
+        </div>
+      </div>
   </ion-content>
 </ion-modal-view>
