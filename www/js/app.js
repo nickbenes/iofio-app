@@ -36,7 +36,7 @@ angular.module('iofio', ['ionic','ionic.service.core', 'iofio.controllers', 'iof
     .state('page', {
       abstract: true,
       templateUrl: 'templates/page.html',
-      controller: 'MainCtrl as main'
+      controller: 'MainCtrl'
     })
       
     /*
