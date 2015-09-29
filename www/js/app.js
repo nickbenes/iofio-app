@@ -64,7 +64,7 @@ angular.module('iofio', ['ionic','ionic.service.core', 'iofio.controllers', 'iof
       templateUrl: 'templates/settings.html'
     })
     
-    .state('player', {
+    .state('page.player', {
       url: '/player',
       templateUrl: 'templates/player.html'
     })

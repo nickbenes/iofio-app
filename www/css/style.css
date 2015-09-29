@@ -1,8 +1,17 @@
 .media-controls {
-  position: absolute;
-  bottom: 50px;
-  width: 100%;
   text-align: center;
+}
+
+.media-controls a:first-child {
+  text-align: right;
+}
+
+.media-controls a:last-child {
+  text-align: left;
+}
+
+.player-title {
+  font-weight: 500 !important;
 }
 
 .bar-translucent {
