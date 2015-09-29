@@ -1,3 +1,4 @@
+/* global angular */
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
@@ -38,7 +39,7 @@ angular.module('iofio', ['ionic','ionic.service.core', 'iofio.controllers', 'iof
       controller: 'MainCtrl as main'
     })
       
-    // Home page
+    /*
     .state('page.home', {
       url: '/',
       templateUrl: 'templates/home.html'      
@@ -48,6 +49,7 @@ angular.module('iofio', ['ionic','ionic.service.core', 'iofio.controllers', 'iof
       url: '/search',
       templateUrl: 'templates/search.html'
     })
+    */
     
     .state('page.playlist', {
       url: '/playlist',
@@ -70,6 +72,6 @@ angular.module('iofio', ['ionic','ionic.service.core', 'iofio.controllers', 'iof
     })
     
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/playlist');
 
 });

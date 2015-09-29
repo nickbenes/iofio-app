@@ -45,7 +45,7 @@
       </ion-nav-view>
       
       <div class="bar bar-footer bar-stable bar-translucent">
-        <button ui-sref="page.home" 
+        <button ng-click="openHome()" 
           class="button button-clear">
           <i class="icon ion-home"></i>
         </button>
@@ -54,7 +54,7 @@
           <a class="button button-clear"><i class="icon ion-ios-play"></i></a>
           <a class="button button-clear"><i class="icon ion-ios-fastforward"></i></a>
         </div>
-        <button ui-sref="page.search"
+        <button ng-click="openSearch()"
           class="button button-clear icon ion-search">
         </button>
       </div>
