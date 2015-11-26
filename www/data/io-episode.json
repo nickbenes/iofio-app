@@ -1,0 +1,22 @@
+{
+  "title": ["Ep. 32 - 'Startup Travel' w/ Mickey Cloud, VP at VaynerMedia"],
+  "itunes:subtitle": ["Inside Access to Startups Outside Silicon Valley"],
+  "guid": [{
+    "_": "d5eec3c9-24e8-402a-af91-38250637bffb",
+    "$": { "isPermaLink": "false" }
+  }],
+  "pubDate": ["Mon, 16 Nov 2015 17:14:08 GMT"],
+  "itunes:duration": ["00:41:56"],
+  "itunes:keywords": [""],
+  "itunes:explicit": ["no"],
+  "itunes:image": [{ "$": { "href": "http://az592690.vo.msecnd.net/media/v1/d5eec3c9-24e8-402a-af91-38250637bffb/32-ih27e37y.png" } }],
+  "description": ["This episode is all about how to remain productive while traveling. We discuss various aspects of travel and how to optimize your experience. We also caught up with Mickey Cloud, VP at VaynerMedia in Chattanooga TN. All this and more on this episode of Inside Outside."],
+  "link": ["https://www.acast.com/channels/insideoutside/acasts/ep.32-startuptravelw-mickeycloud-vpatvaynermedia"],
+  "enclosure": [{
+    "$": {
+      "url": "http://rss.acast.com/insideoutside/ep.32-startuptravelw-mickeycloud-vpatvaynermedia/media.mp3",
+      "length": "58244576",
+      "type": "audio/mpeg"
+    }
+  }]
+}
