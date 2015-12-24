@@ -1,5 +1,5 @@
 /* global angular */
-angular.module('iofio.controllers', [])
+angular.module('iofio')
 
 /* Commented content enables side menu 
   .controller('MainCtrl', function ($ionicSideMenuDelegate, $state) {

@@ -1,2 +1,2 @@
 /* global angular */
-angular.module('iofio.services', [])
+// angular.module('iofio')
