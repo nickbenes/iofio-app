@@ -1,13 +1,16 @@
 /* global angular */
 angular.module('iofio')
 
-/* Commented content enables side menu 
-  .controller('MainCtrl', function ($ionicSideMenuDelegate, $state) {
-    this.toggleLeft = function () {
-      $ionicSideMenuDelegate.toggleLeft();
+  .controller('PlayerCtrl', ["$sce", function ($sce) {
+    this.config = {
+      sources: [
+        {src: $sce.trustAsResourceUrl("audio/insideoutside-ep32.mp3"), type: "audio/mpeg"}
+      ],
+      theme: "lib/videogular-themes-default/videogular.css"
     }
-*/
-  .controller('MainCtrl', function($ionicModal, $state, $scope) {
+  }])
+
+  .controller('MainCtrl', function($sce, $ionicModal, $state, $scope) {
     var scope = $scope;
     
     scope.$state = $state;
@@ -19,6 +22,13 @@ angular.module('iofio')
       duration: null,
       state: null
     };
+    
+    scope.config = {
+      sources: [
+        {src: $sce.trustAsResourceUrl("audio/insideoutside-ep32.mp3"), type: "audio/mpeg"}
+      ],
+      theme: "css/iofio-player.css"
+    }
     
     // Home Modal
     $ionicModal
@@ -64,30 +74,3 @@ angular.module('iofio')
         scope.searchModal.remove();
     })
   })
-
-/*
-  .controller('MenuCtrl', function () {
-    this.items = [
-      {
-        name: "Home",
-        ref: "page.home"
-      },
-      {
-        name: "Playlists",
-        ref: "page.playlist"
-      },
-      {
-        name: "Search",
-        ref: "page.search"
-      },
-      {
-        name: "Donations",
-        ref: "page.donations"
-      },
-      {
-        name: "Settings",
-        ref: "page.settings"
-      },
-    ]
-  });
-*/

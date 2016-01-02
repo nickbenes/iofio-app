@@ -1,26 +1,4 @@
 <ion-view>
-<!-- Commented content enables left-hand side-menu -->
-<!-- 
-  <ion-side-menus enable-menu-with-back-views="true">
-  
-    <ion-side-menu side="left">
-      <ion-list ng-controller="MenuCtrl as menu">
-        <ion-item class="item-divider">Pages</ion-item>
-        <ion-item data-ng-repeat="item in menu.items"
-          ui-sref="{{item.ref}}" menu-close class="item-icon-right">
-          {{ item.name }}
-          <i class="icon ion-chevron-right"></i>
-        </ion-item>
-        <ion-item data-ng-if="player.title"
-          ui-sref="page.now-playing"" menu-close class="item-icon-right">
-          {{ player.title }}
-          <i class="icon ion-chevron-right"></i>
-        </ion-item>
-      </ion-list>    
-    </ion-side-menu>
-    
-    <ion-side-menu-content>
--->
       <ion-nav-bar align-title="left" 
         class="bar bar-header bar-stable bar-translucent">
         <ion-nav-back-button class="padding button-icon button-clear ion-arrow-left-c">
@@ -45,22 +23,25 @@
       </ion-nav-view>
       
       <div class="bar bar-footer bar-stable bar-translucent">
-        <button ng-click="openHome()" 
-          class="button button-clear">
-          <i class="icon ion-home"></i>
-        </button>
-        <div class="button-bar media-controls">
-          <a class="button button-clear"><i class="icon ion-ios-rewind"></i></a>
-          <a class="button button-clear"><i class="icon ion-ios-play"></i></a>
-          <a class="button button-clear"><i class="icon ion-ios-fastforward"></i></a>
+        <div class="videogular-container">
+          <videogular vg-theme="config.theme">
+            <vg-media class="audio" vg-src="config.sources">
+            </vg-media>
+            
+            <vg-controls>
+              <vg-play-pause-button></vg-play-pause-button>
+              <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+              <vg-scrub-bar>
+                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+              </vg-scrub-bar>
+              <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+              <vg-volume>
+                <vg-mute-button></vg-mute-button>
+                <vg-volume-bar></vg-volume-bar>
+              </vg-volume>
+            </vg-controls>
+      
+          </videogular>
         </div>
-        <button ng-click="openSearch()"
-          class="button button-clear icon ion-search">
-        </button>
       </div>
-<!--  
-    </ion-side-menu-content>
-    
-  </ion-side-menus>
--->
 </ion-view>

@@ -9,7 +9,11 @@
 angular.module('iofio', [
   'ionic',
   'ionic.service.core',
-  'ngCordova'
+  "ngSanitize",
+  "com.2fdevs.videogular",
+  "com.2fdevs.videogular.plugins.controls",
+  "com.2fdevs.videogular.plugins.overlayplay",
+  "com.2fdevs.videogular.plugins.poster"
 ])
 
 .run(function($ionicPlatform) {

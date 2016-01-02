@@ -2,8 +2,8 @@ angular
   .module('iofio-player')
   .service('IofioPlayer', IofioPlayer);
 
-IofioPlayer.$inject = ['$http', '$timeout', '$q', '$cordovaMedia']
-function IofioPlayer($http, $timeout, $q, $cordovaMedia) {
+IofioPlayer.$inject = ['$http', '$timeout', '$q']
+function IofioPlayer($http, $timeout, $q) {
   var playlist = [];
   var currentId = 0;
   var isReady = false;
@@ -53,6 +53,7 @@ function IofioPlayer($http, $timeout, $q, $cordovaMedia) {
   
   function loadAudio(src) {
     src = src || playlist[currentId].src;
+    /*
     var media = new $cordovaMedia(src, function mediaSuccess(pos) {
       position = pos;
       isLoaded = true;
@@ -63,6 +64,7 @@ function IofioPlayer($http, $timeout, $q, $cordovaMedia) {
     }, function statusChange(mediaStatus) {
       status = mediaStatus;
     })
+    */
   }
   
   function playerError(err) {
