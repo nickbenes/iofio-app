@@ -1,11 +1,3 @@
-.bar.bar-footer {
-  padding: 0;
-  height: 51px;
-}
-
-.bar.bar-header {
-  height: 51px;
-}
 /**
  * Based on Videogular default theme
  */
@@ -57,42 +49,6 @@ iofio-back {
 
 iofio-forward {
   text-align: left;
-}
-
-@media (min-width: 1200px) {
-    .videogular-container {
-        width: 1170px;
-        height: 658.125px;
-    }
-
-    .videogular-container.audio {
-        width: 1170px;
-        height: 50px;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    .videogular-container {
-        width: 940px;
-        height: 528.75px;
-    }
-
-    .videogular-container.audio {
-        width: 940px;
-        height: 50px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .videogular-container {
-        width: 728px;
-        height: 409.5px;
-    }
-
-    .videogular-container.audio {
-        width: 728px;
-        height: 50px;
-    }
 }
  
 @font-face {

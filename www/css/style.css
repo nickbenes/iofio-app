@@ -1,13 +1,27 @@
-.media-controls {
+.bar {
+  height: 50px;
+  border-width: 0;
+}
+.bar.bar-footer {
+  padding: 0;
+}
+
+.iofio-player {
+  background: linear-gradient(to bottom, #444444 0%,#444444 5%,#f0ece1 15%,#f0ece1 85%,#222222 95%,#222222 100%); 
+}
+
+.iofio-player .scroll,
+.iofio-player .row {
+  height: 100%;
+}
+
+.iofio-player .col {
   text-align: center;
 }
 
-.media-controls a:first-child {
-  text-align: right;
-}
-
-.media-controls a:last-child {
-  text-align: left;
+.iofio-player img {
+  width: 100%;
+  max-width: 300px;
 }
 
 .iofio-modal-grid, 
@@ -61,13 +75,5 @@
 }
 
 ion-content {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5bdc8+0,558772+28,1d3342+100 */
-  background: #b5bdc8; /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  #b5bdc8 0%, #558772 28%, #1d3342 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#b5bdc8), color-stop(28%,#558772), color-stop(100%,#1d3342)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg,  #b5bdc8 0%,#558772 28%,#1d3342 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg,  #b5bdc8 0%,#558772 28%,#1d3342 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg,  #b5bdc8 0%,#558772 28%,#1d3342 100%); /* IE10+ */
-  background: linear-gradient(135deg,  #b5bdc8 0%,#558772 28%,#1d3342 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#1d3342',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: linear-gradient(135deg,  #b5bdc8 0%,#558772 28%,#1d3342 100%);
 }

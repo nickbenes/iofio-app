@@ -1,22 +1,23 @@
 /* global angular */
 angular.module('iofio')
 
-  .controller('MainCtrl', function($sce, $ionicModal, $state, $scope) {
+  .controller('MainCtrl', function($sce, $ionicModal, $state, $scope, MockData) {
     var scope = $scope;
     
     scope.$state = $state;
-
+    
+    scope.itunes = MockData.itunes();
+    scope.podcast = MockData.podcast();
+    scope.episode = MockData.episode();
+    
     scope.player = {
-      title: "Polygon Longform: A podcast episode",
-      src: null,
-      position: null,
-      duration: null,
-      state: null
+      title: scope.podcast.name + ": " + scope.episode.name,
     };
     
     scope.config = {
       sources: [
         {src: $sce.trustAsResourceUrl("audio/insideoutside-ep32.mp3"), type: "audio/mpeg"}
+        // {src: $sce.trustAsResourceUrl(scope.episode.media.url), type: scope.episode.media.type}
       ],
       theme: "css/iofio-player.css"
     }

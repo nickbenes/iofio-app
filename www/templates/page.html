@@ -1,6 +1,6 @@
 <ion-view>
   <ion-nav-bar 
-    class="bar bar-header bar-dark">
+    class="bar-dark">
     <ion-nav-buttons side="left">
       <button 
         ng-if="player.title && $state.current.name !== 'page.player'" 
@@ -27,7 +27,7 @@
     <ion-spinner></ion-spinner>  
   </ion-nav-view>
   
-  <div class="bar bar-footer bar-dark">
+  <ion-footer-bar class="bar-dark">
     <div class="videogular-container">
       <videogular vg-theme="config.theme">
         <vg-media class="audio" vg-src="config.sources">
@@ -55,5 +55,5 @@
   
       </videogular>
     </div>
-  </div>
+  </ion-footer-bar>
 </ion-view>
