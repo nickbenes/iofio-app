@@ -1,15 +1,6 @@
 /* global angular */
 angular.module('iofio')
 
-  .controller('PlayerCtrl', ["$sce", function ($sce) {
-    this.config = {
-      sources: [
-        {src: $sce.trustAsResourceUrl("audio/insideoutside-ep32.mp3"), type: "audio/mpeg"}
-      ],
-      theme: "lib/videogular-themes-default/videogular.css"
-    }
-  }])
-
   .controller('MainCtrl', function($sce, $ionicModal, $state, $scope) {
     var scope = $scope;
     

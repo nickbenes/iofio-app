@@ -1,9 +1,17 @@
+.bar.bar-footer {
+  padding: 0;
+  height: 51px;
+}
+
+.bar.bar-header {
+  height: 51px;
+}
 /**
  * Based on Videogular default theme
  */
 .videogular-container {
     width: 100%;
-    height: 50px;
+    height: 100px;
     margin: auto;
     overflow: hidden;
 }
@@ -13,8 +21,44 @@
 }
 
 .videogular-container video {
-  height: 0;
+    height: 0;
 }
+
+videogular .vg-row, [videogular] .vg-row {
+  display: table-row;
+  width: 100%;
+  height: 50px;
+  vertical-align: middle;
+  text-align: center; 
+}
+
+videogular button {
+  display: table-cell;
+  height: 50px;
+  width: 50px;
+  vertical-align: middle;
+  text-align: center;
+}   
+
+videogular .iconButton {
+  font-size: 24px;
+}
+
+iofio-back, iofio-forward {
+  display: table-cell;
+  height: 50px;
+  width: 100px;
+  vertical-align: middle;
+}
+
+iofio-back {
+  text-align: right;
+}
+
+iofio-forward {
+  text-align: left;
+}
+
 @media (min-width: 1200px) {
     .videogular-container {
         width: 1170px;
@@ -118,7 +162,7 @@ videogular, [videogular] {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     background: none;
-    padding: 6px;
+    padding: 0;
     border: none; }
   videogular .iconButton:focus, [videogular] .iconButton:focus {
     border: 1px solid white; }
@@ -181,7 +225,7 @@ videogular, [videogular] {
     display: block;
     position: absolute;
     z-index: 3;
-    bottom: 0; }
+    top: 0; }
   videogular vg-controls .controls-container, [videogular] vg-controls .controls-container {
     width: 100%;
     height: 50px;

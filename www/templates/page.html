@@ -1,47 +1,59 @@
 <ion-view>
-      <ion-nav-bar align-title="left" 
-        class="bar bar-header bar-stable bar-translucent">
-        <ion-nav-back-button class="padding button-icon button-clear ion-arrow-left-c">
-        </ion-nav-back-button>
-        <!--ion-nav-buttons side="left">
-          <button data-ng-click="toggleLeft()"
-            class="button button-clear icon ion-navicon">
-          </button>
-        </ion-nav-buttons-->  
-        <ion-nav-buttons side="right">
-          <button data-ng-if="player.title && $state.current.name !== 'page.player'" 
-            class="button button-clear player-title"
-            ui-sref="page.player">
-            {{ player.title }}
-            <i class="icon-right ion-chevron-right padding"></i>
-          </button>
-        </ion-nav-buttons>  
-      </ion-nav-bar>
-
-      <ion-nav-view>
-        <ion-spinner></ion-spinner>  
-      </ion-nav-view>
-      
-      <div class="bar bar-footer bar-stable bar-translucent">
-        <div class="videogular-container">
-          <videogular vg-theme="config.theme">
-            <vg-media class="audio" vg-src="config.sources">
-            </vg-media>
-            
-            <vg-controls>
-              <vg-play-pause-button></vg-play-pause-button>
-              <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
-              <vg-scrub-bar>
-                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-              </vg-scrub-bar>
-              <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
-              <vg-volume>
-                <vg-mute-button></vg-mute-button>
-                <vg-volume-bar></vg-volume-bar>
-              </vg-volume>
-            </vg-controls>
-      
-          </videogular>
-        </div>
+  <ion-nav-bar 
+    class="bar bar-header bar-dark">
+    <ion-nav-buttons side="left">
+      <button 
+        ng-if="player.title && $state.current.name !== 'page.player'" 
+        class="button button-clear player-title"
+        ui-sref="page.player">
+        {{ player.title }}
+        <i class="icon-right ion-chevron-right padding"></i>
+      </button>
+      <button 
+        ng-if="player.title && $state.current.name === 'page.player'"
+        class="button button-clear player-title">
+        {{ player.title }}
+      </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <div  ng-if="player.title && $state.current.name === 'page.player'"> 
+        <button class="button button-clear icon ion-arrow-down-a"></button>
+        <button class="button button-clear icon ion-arrow-up-a"></button>
       </div>
+    </ion-nav-buttons>  
+  </ion-nav-bar>
+
+  <ion-nav-view>
+    <ion-spinner></ion-spinner>  
+  </ion-nav-view>
+  
+  <div class="bar bar-footer bar-dark">
+    <div class="videogular-container">
+      <videogular vg-theme="config.theme">
+        <vg-media class="audio" vg-src="config.sources">
+        </vg-media>
+        
+        <vg-controls>
+          <div class="vg-row">
+            <button ng-click="openHome()" class="button button-clear icon ion-home"></button>
+            <iofio-back>
+              <button class="button button-clear icon-right ion-ios-rewind"></button>
+            </iofio-back>
+            <vg-play-pause-button></vg-play-pause-button>
+            <iofio-forward>
+              <button class="button button-clear icon-left ion-ios-fastforward"></button>
+            </iofio-forward>
+            <button class="button button-clear icon ion-search"></button>
+          </div>
+          <div class="vg-row">
+            <vg-volume ng-if="$state.current.name === 'page.nowPlaying'">
+              <vg-mute-button></vg-mute-button>
+              <vg-volume-bar></vg-volume-bar>
+            </vg-volume>
+          </div>
+        </vg-controls>
+  
+      </videogular>
+    </div>
+  </div>
 </ion-view>
