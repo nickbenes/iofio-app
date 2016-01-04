@@ -30,6 +30,22 @@
   100%  { transform: translate(-100%,0); }
 }
 
+.iofio-donations .pie {
+  width: 335px;
+}
+
+.iofio-donations .range {
+  height: 30px;
+}
+
+.iofio-donations .podcast-name {
+  width: 100px;
+}
+
+.iofio-donations .podcast-donation {
+  width: 25px;
+}
+
 .iofio-player {
   background: linear-gradient(to bottom, #444444 0%,#444444 5%,#f0ece1 15%,#f0ece1 85%,#222222 95%,#222222 100%); 
 }

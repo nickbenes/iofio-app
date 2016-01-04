@@ -8,6 +8,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('iofio', [
   'ionic',
+  'nvd3',
   'ionic.service.core',
   "ngSanitize",
   "com.2fdevs.videogular",

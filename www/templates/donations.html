@@ -1,5 +1,25 @@
-<ion-view hide-back-button="true">
-  <ion-content>
-
+<ion-view>
+  <ion-content class="iofio-donations">
+    <div class="row">
+      <div class="col">
+        <h1>{{donations.total}}$ per month</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col pie">
+        <nvd3 options="donations.options" data="donations.data"></nvd3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="list" ng-repeat="d in donations.data">
+          <div class="range range-positive">
+            <span class="podcast-name">{{ d.name }}</span>
+            <input type="range" name="volume" min="0" max="1" step=".05" ng-model="d.share">
+            <span>{{ (+d.share) * donations.total }}$</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

@@ -3,13 +3,45 @@ angular.module('iofio')
 
   .controller('MainCtrl', function($sce, $ionicModal, $state, $scope, MockData) {
     var scope = $scope;
+    var donations = scope.donations = MockData.donations();
     
-    scope.$state = $state;
+    donations.options = {
+      chart: {
+                type: 'pieChart',
+                height: 350,
+                width: 350,
+                x: function(d){return d.name;},
+                y: function(d){return +d.share;},
+                showLabels: true,
+                duration: 500,
+                labelThreshold: 0.05,
+                labelType: 'percent',
+                donut: true,
+                donutRatio: 0.7,
+                donutLabelsOutside: true,
+                margin: {
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 5
+                },
+                 legend: {
+                    margin: {
+                        top: 0,
+                        right: 35,
+                        bottom: 5,
+                        left: 0
+                    }
+                }
+            }
+    };
     
     scope.itunes = MockData.itunes();
     scope.podcast = MockData.podcast();
     scope.episode = MockData.episode();
     
+    scope.$state = $state;
+
     scope.player = {
       title: scope.podcast.name + ": " + scope.episode.name,
     };

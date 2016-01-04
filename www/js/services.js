@@ -130,7 +130,7 @@ function MockData() {
   function donations() {
     return {
       total: 20,
-      distribution: [
+      data: [
         { name: "Lasertime", share: .55 },
         { name: "Bonfireside Chats", share: .25 },
         { name: "iofio", share: .2 }
