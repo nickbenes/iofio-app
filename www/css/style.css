@@ -6,6 +6,30 @@
   padding: 0;
 }
 
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 0;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee span:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0%    { transform: translate(0,0); }
+  20%   { transform: translate(0,0); }
+  100%  { transform: translate(-100%,0); }
+}
+
 .iofio-player {
   background: linear-gradient(to bottom, #444444 0%,#444444 5%,#f0ece1 15%,#f0ece1 85%,#222222 95%,#222222 100%); 
 }
@@ -22,6 +46,10 @@
 .iofio-player img {
   width: 100%;
   max-width: 300px;
+}
+
+.iofio-playlist img {
+  width: 100%;
 }
 
 .iofio-modal-grid, 

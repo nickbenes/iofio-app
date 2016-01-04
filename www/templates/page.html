@@ -2,18 +2,15 @@
   <ion-nav-bar 
     class="bar-dark">
     <ion-nav-buttons side="left">
-      <button 
-        ng-if="player.title && $state.current.name !== 'page.player'" 
-        class="button button-clear player-title"
-        ui-sref="page.player">
-        {{ player.title }}
-        <i class="icon-right ion-chevron-right padding"></i>
-      </button>
-      <button 
-        ng-if="player.title && $state.current.name === 'page.player'"
-        class="button button-clear player-title">
-        {{ player.title }}
-      </button>
+      <div ng-if="player.title">
+        <div class="marquee button button-clear player-title" ui-sref="page.player">
+          <span>{{ player.title }}</span>
+        </div>
+        <button ng-if="$state.current.name !== 'page.player'"
+          class="button button-clear icon ion-chevron-right"
+          ui-sref="page.player">
+        </button>
+      </div>
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
       <div  ng-if="player.title && $state.current.name === 'page.player'"> 
