@@ -75,7 +75,7 @@ function MockData() {
       "trackViewUrl": "https://itunes.apple.com/us/podcast/inside-outside/id984656982?mt=2&uo=4",
       "artworkUrl30": "http://is3.mzstatic.com/image/thumb/Music1/v4/28/d8/22/28d82223-a497-95fb-63a9-eec9177c9743/source/30x30bb.jpg",
       "artworkUrl60": "http://is3.mzstatic.com/image/thumb/Music1/v4/28/d8/22/28d82223-a497-95fb-63a9-eec9177c9743/source/60x60bb.jpg",
-      "artworkUrl100": "http://is3.mzstatic.com/image/thumb/Music1/v4/28/d8/22/28d82223-a497-95fb-63a9-eec9177c9743/source/100x100bb.jpg",
+      "artworkThumb": "http://is3.mzstatic.com/image/thumb/Music1/v4/28/d8/22/28d82223-a497-95fb-63a9-eec9177c9743/source/100x100bb.jpg",
       "collectionPrice": 0,
       "trackPrice": 0,
       "trackRentalPrice": 0,
