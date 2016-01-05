@@ -1,3 +1,37 @@
+@font-face {
+  src: url("fonts/Antenna-ExtraLight.otf");
+  font-family: Antenna;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  src: url("fonts/Antenna-ExtraLightItalic.otf");
+  font-family: Antenna;
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  src: url("fonts/Antenna-Medium.otf");
+  font-family: Antenna;
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  src: url("fonts/Antenna-MediumItalic.otf");
+  font-family: Antenna;
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  font-family: Antenna !important;
+}
+
+h1, h2, h3 {
+  font-family: Antenna;
+  font-weight: bold;
+}
+
 ion-view {
   background-color: rgb(22,0,13) !important;
 }
