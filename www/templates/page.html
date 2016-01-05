@@ -26,7 +26,7 @@
   
   <ion-footer-bar class="bar-dark">
     <div class="videogular-container">
-      <videogular vg-theme="config.theme">
+      <videogular vg-player-ready="onPlayerReady($API)" vg-theme="config.theme">
         <vg-media class="audio" vg-src="config.sources">
         </vg-media>
         
@@ -34,15 +34,15 @@
           <div class="vg-row">
             <button ng-click="openHome()" class="button button-clear icon iofio-home"></button>
             <iofio-back>
-              <button class="button button-clear icon iofio-back"></button>
-              <button class="button button-clear icon iofio-scrubbk"></button>
+              <button ng-click="back()" class="button button-clear icon iofio-back"></button>
+              <button ng-click="scrubbk()" class="button button-clear icon iofio-scrubbk"></button>
             </iofio-back>
             <iofio-playpause>
-              <button class="button button-clear iofio-play"></button>
+              <button ng-click="playPause()" class="button button-clear iofio-{{playPauseClass()}}"></button>
             </iofio-playpause>
             <iofio-forward>
-              <button class="button button-clear icon iofio-scrubfwd"></button>
-              <button class="button button-clear icon iofio-forward"></button>
+              <button ng-click="scrubfwd" class="button button-clear icon iofio-scrubfwd"></button>
+              <button ng-click="forward" class="button button-clear icon iofio-forward"></button>
             </iofio-forward>
             <button class="button button-clear icon iofio-search"></button>
           </div>

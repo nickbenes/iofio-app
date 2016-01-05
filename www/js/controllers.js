@@ -4,6 +4,36 @@ angular.module('iofio')
   .controller('MainCtrl', function($sce, $ionicModal, $state, $scope, MockData) {
     var scope = $scope;
     var donations = scope.donations = MockData.donations();
+    var player = scope.API = null;
+    scope.onPlayerReady = function (API) {
+      player = scope.API = API;
+    }
+    
+    scope.back = function () {
+      player.seekTime(0);
+    };
+    scope.scrubbk = function () {
+      var time = player.currentTime;
+      player.seekTime(Math.max(time - 30, 0));
+    }
+    scope.playPause = function () {
+      player.playPause();
+    }
+    scope.playPauseClass = function () {
+      if (player && player.currentState === 'play') {
+        return 'pause';
+      } else {
+        return 'play';
+      }
+    }
+    scope.scrubfwd = function () {
+      var time = player.currentTime;
+      player.seekTime(Math.min(time + 30, player.totalTime));
+    }
+    scope.forward = function () {
+      player.seekTime(player.totalTime);
+    }
+    
     
     donations.options = {
       chart: {
