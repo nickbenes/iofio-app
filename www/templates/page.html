@@ -7,7 +7,7 @@
           <span>{{ player.title }}</span>
         </div>
         <button ng-if="$state.current.name !== 'page.player'"
-          class="button button-clear icon ion-chevron-right"
+          class="button button-clear icon iofio-chevron-right"
           ui-sref="page.player">
         </button>
       </div>
@@ -32,15 +32,19 @@
         
         <vg-controls>
           <div class="vg-row">
-            <button ng-click="openHome()" class="button button-clear icon ion-home"></button>
+            <button ng-click="openHome()" class="button button-clear icon iofio-home"></button>
             <iofio-back>
-              <button class="button button-clear icon-right ion-ios-rewind"></button>
+              <button class="button button-clear icon iofio-back"></button>
+              <button class="button button-clear icon iofio-scrubbk"></button>
             </iofio-back>
-            <vg-play-pause-button></vg-play-pause-button>
+            <iofio-playpause>
+              <button class="button button-clear iofio-play"></button>
+            </iofio-playpause>
             <iofio-forward>
-              <button class="button button-clear icon-left ion-ios-fastforward"></button>
+              <button class="button button-clear icon iofio-scrubfwd"></button>
+              <button class="button button-clear icon iofio-forward"></button>
             </iofio-forward>
-            <button class="button button-clear icon ion-search"></button>
+            <button class="button button-clear icon iofio-search"></button>
           </div>
           <div class="vg-row">
             <vg-volume ng-if="$state.current.name === 'page.nowPlaying'">

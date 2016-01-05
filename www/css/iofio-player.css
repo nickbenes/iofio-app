@@ -43,6 +43,14 @@ iofio-back, iofio-forward {
   vertical-align: middle;
 }
 
+iofio-back button, iofio-forward button {
+  width: 40px;
+}
+
+iofio-forward button.iofio-scrubfwd {
+  width: 46px;
+}
+
 iofio-back {
   text-align: right;
 }

@@ -1,31 +1,24 @@
 <ion-modal-view>
-  <ion-content class="iofio-modal-grid">
-      <div class="row iofio-row-50">
+  <ion-header-bar class="bar-secondary">
+    <h1 class="title">Home</h1>
+    <button class="button button-clear icon ion-close" ng-click="closeHome()"></button>
+  </ion-header-bar>
+  
+  <ion-content>
+      <div class="row">
         <div class="col" ui-sref="page.playlist" ng-click="closeHome()">
-          <div class="iofio-grid-button">
-            <div class="iofio-grid-icon"><i class="icon ion-radio-waves"></i></div>
-            <div class="iofio-grid-label">My Podcasts</div>
-          </div>
+          <img src="img/podcasts.svg"/>
         </div>
         <div class="col" ui-sref="page.featured" ng-click="closeHome()">
-          <div class="iofio-grid-button">
-            <div class="iofio-grid-icon"><i class="icon ion-star"></i></div>
-            <div class="iofio-grid-label">Featured</div>
-          </div>
+          <img src="img/featured.svg"/>
         </div>
       </div>
-      <div class="row iofio-row-50">
+      <div class="row">
         <div class="col" ui-sref="page.donations" ng-click="closeHome()">
-          <div class="iofio-grid-button">
-            <div class="iofio-grid-icon"><i class="icon ion-social-usd"></i></div>
-            <div class="iofio-grid-label">Donations</div>
-          </div>
+          <img src="img/donations.svg"/>
         </div>
         <div class="col" ui-sref="page.settings" ng-click="closeHome()">
-          <div class="iofio-grid-button">
-            <div class="iofio-grid-icon"><i class="icon ion-gear-a"></i></div>
-            <div class="iofio-grid-label">Settings</div>
-          </div>
+          <img src="img/settings.svg"/>
         </div>
       </div>
   </ion-content>

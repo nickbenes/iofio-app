@@ -22,6 +22,10 @@
   font-weight: bold;
   font-style: italic;
 }
+@font-face {
+  src: url("fonts/iofioicons.ttf");
+  font-family: iofio;
+}
 
 body {
   font-family: Antenna !important;
@@ -30,6 +34,55 @@ body {
 h1, h2, h3 {
   font-family: Antenna;
   font-weight: bold;
+}
+
+.iofio-back:before,
+.iofio-forward:before,
+.iofio-scrubbk:before,
+.iofio-scrubfwd:before,
+.iofio-home:before,
+.iofio-search:before,
+.iofio-volume:before,
+.iofio-pause:before,
+.iofio-play:before
+{
+  font-family: iofio;
+  font-size: 50px !important;
+  line-height: 64px !important;
+}
+
+.iofio-back:before {
+    content: "\0041";
+}
+.iofio-forward:before {
+    content: "\0042";
+}
+.iofio-scrubbk:before {
+    content: "\0043";
+}
+.iofio-scrubfwd:before {
+    content: "\0044";
+}
+.iofio-home:before {
+  content: "\0045";
+}
+.iofio-search:before {
+  content: "\0046";
+}
+.iofio-volume:before {
+    content: "\0047";
+}
+.iofio-pause:before {
+    content: "\0048";
+}
+.iofio-play:before {
+    content: "\0049";
+}
+.iofio-chevron-right:before {
+  font-family: iofio;
+  content: "\004a";
+  font-size: 72px !important;
+  line-height: 55px !important;
 }
 
 ion-view {
@@ -43,6 +96,19 @@ ion-content, h1, h2, h3 {
 text {
   fill: antiquewhite;
 }
+
+.modal {
+  background-color: rgba(22,22,22,0.7);  
+}
+
+.modal .bar-header {
+  background-color: rgba(44,44,44,1);
+}
+
+.modal .title {
+  font-size: 30px;
+}
+
 .bar {
   height: 50px;
   border-width: 0;
@@ -123,48 +189,6 @@ text {
 
 .iofio-featured .spacer {
   min-height: 50px;
-}
-
-.iofio-modal-grid, 
-.iofio-modal-grid .scroll-content,
-.iofio-modal-grid .scroll {
-  height: 100%;
-}
-
-.iofio-row-50 {
-  height: 50%;
-}
-
-.iofio-row-50 .col {
-  height: 100%;
-}
-
-.iofio-grid-button {
-  background: darkslategray;
-  text-align: center;
-  color: white;
-  height: 100%;
-}
-
-.iofio-grid-button > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.iofio-grid-button .iofio-grid-icon {
-  height: 80%;
-  font-size: 108px;
-  font-weight: 800;
-  padding-top: 48px;
-}
-
-.iofio-grid-button .iofio-grid-label {
-  height: 20%;
-  font-size: 28px;
-  font-weight: 500;
-  padding: 10px;
 }
 
 .player-title {
