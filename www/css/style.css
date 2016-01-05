@@ -1,3 +1,14 @@
+ion-view {
+  background-color: rgb(22,0,13) !important;
+}
+
+ion-content, h1, h2, h3 {
+  color: antiquewhite;
+}
+
+text {
+  fill: antiquewhite;
+}
 .bar {
   height: 50px;
   border-width: 0;
@@ -46,8 +57,8 @@
   width: 25px;
 }
 
-.iofio-player {
-  background: linear-gradient(to bottom, #444444 0%,#444444 5%,#f0ece1 15%,#f0ece1 85%,#222222 95%,#222222 100%); 
+.iofio-gradient {
+  background: linear-gradient(to bottom, rgba(68,68,68,1) 0%,rgba(68,68,68,1) 5%,rgba(68,68,68,0) 15%,rgba(34,34,34,0) 85%,rgba(34,34,34,1) 95%,rgba(34,34,34,1) 100%); 
 }
 
 .iofio-player .scroll,
@@ -61,11 +72,23 @@
 
 .iofio-player img {
   width: 100%;
-  max-width: 300px;
+  max-width: 450px;
 }
 
 .iofio-playlist img {
   width: 100%;
+}
+
+.iofio-featured .focus {
+  min-height: 200px;  
+}
+
+.iofio-featured .info {
+  background-color: rgba(12,12,12,.9);
+}
+
+.iofio-featured .spacer {
+  min-height: 50px;
 }
 
 .iofio-modal-grid, 
@@ -118,6 +141,6 @@
   opacity: .7;
 }
 
-ion-content {
+iofio-green {
   background: linear-gradient(135deg,  #b5bdc8 0%,#558772 28%,#1d3342 100%);
 }

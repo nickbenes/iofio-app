@@ -70,6 +70,11 @@ angular.module('iofio', [
       templateUrl: 'templates/donations.html'
     })
     
+    .state('page.featured', {
+      url: '/featured',
+      templateUrl: 'templates/featured.html'
+    })
+    
     .state('page.settings', {
       url: '/settings',
       templateUrl: 'templates/settings.html'

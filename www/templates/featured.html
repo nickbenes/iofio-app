@@ -1,0 +1,27 @@
+<ion-view>
+  <ion-content class="iofio-featured">
+    <div class="row">
+      <div class="col">
+        <h1>Featured</h1>
+      </div>
+    </div>
+    <div class="row focus" back-img="{{itunes.artworkUrl600}}">
+      <div class="col col-100">
+        <div class="row">
+          <div class="col info">
+            <h2>{{itunes.trackName}}</h2>
+          </div>
+          <!-- Hack to get a 40% column -->
+          <div class="col col-10"></div>
+          <div class="col col-50"></div>
+        </div>
+        <div class="row spacer"></div>
+        <div class="row">
+          <div class="col col-67 col-offset-33 info">
+            <p>{{podcast['itunes:summary'][0]}}</p>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

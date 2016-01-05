@@ -43,7 +43,7 @@ angular.module('iofio')
     scope.$state = $state;
 
     scope.player = {
-      title: scope.podcast.name + ": " + scope.episode.name,
+      title: scope.podcast.title[0] + ": " + scope.episode.name,
     };
     
     scope.config = {
