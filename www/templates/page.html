@@ -3,7 +3,7 @@
     class="bar-dark">
     <ion-nav-buttons side="left">
       <div ng-if="player.title">
-        <div class="marquee button button-clear player-title" ui-sref="page.player">
+        <div nav-direction="swap" class="marquee button button-clear player-title" ui-sref="page.player">
           <span>{{ player.title }}</span>
         </div>
         <button ng-if="$state.current.name !== 'page.player'"
