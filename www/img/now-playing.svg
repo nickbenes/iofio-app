@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#6FB4E3;}
+	.st1{fill:#FFFFFF;}
+	.st2{font-family:'Antenna-ExtraLight';}
+	.st3{font-size:18px;}
+	.st4{text-anchor:'middle';}
+</style>
+<rect class="st0" width="128" height="128"/>
+<text transform="matrix(1 0 0 1 64 115.8333)" class="st1 st2 st3 st4">Now Playing</text>
+<polygon class="st1" points="98.4,52.55 39.2,80.7 39.2,24.4 "/>
+</svg>
