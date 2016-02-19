@@ -202,3 +202,7 @@ text {
 iofio-green {
   background: linear-gradient(135deg,  #b5bdc8 0%,#558772 28%,#1d3342 100%);
 }
+
+.home-menu .home-menu-item {
+  width: 100%;
+}

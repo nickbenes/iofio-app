@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#6FB4E3;}
-	.st1{fill:#FFFFFF;}
-	.st2{font-family:'Antenna-ExtraLight';}
-	.st3{font-size:18px;}
-	.st4{text-anchor:'middle';}
-</style>
-<rect class="st0" width="128" height="128"/>
-<text transform="matrix(1 0 0 1 64 115.8333)" class="st1 st2 st3 st4">Now Playing</text>
-<polygon class="st1" points="98.4,52.55 39.2,80.7 39.2,24.4 "/>
-</svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><defs><style>.cls-1{fill:#70b5e3;}.cls-2{font-size:17px;font-family:Antenna;}.cls-2,.cls-3{fill:#fff;}</style></defs><title>now playing</title><rect class="cls-1" width="128" height="128"/><text class="cls-2" transform="translate(11.42 115.83)">N<tspan x="13.57" y="0">o</tspan><tspan x="24.19" y="0">w </tspan><tspan x="43.63" y="0">P</tspan><tspan x="55.82" y="0">l</tspan><tspan x="60.1" y="0">a</tspan><tspan x="70.56" y="0">ying</tspan></text><path class="cls-3" d="M91.44,49.22L48.87,25.51c-3.1-1.89-6.15-.37-6.15,3.39V76.43c0,3.76,3,5.29,6.15,3.39l42.5-23.36C95.32,54.21,93.88,50.59,91.44,49.22Z"/></svg>

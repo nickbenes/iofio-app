@@ -4,21 +4,21 @@
     <button class="button button-clear icon ion-close" ng-click="closeHome()"></button>
   </ion-header-bar>
   
-  <ion-content>
+  <ion-content class="home-menu">
       <div class="row">
-        <div class="col" nav-direction="swap" ui-sref="page.playlist" ng-click="closeHome()">
+        <div class="col home-menu-item" nav-direction="swap" ui-sref="page.playlist" ng-click="closeHome()">
           <img src="img/podcasts.svg"/>
         </div>
-        <div class="col" nav-direction="swap" ui-sref="page.featured" ng-click="closeHome()">
+        <div class="col home-menu-item" nav-direction="swap" ui-sref="page.featured" ng-click="closeHome()">
           <img src="img/featured.svg"/>
         </div>
       </div>
       <div class="row">
-        <div class="col" nav-direction="swap" ui-sref="page.donations" ng-click="closeHome()">
+        <div class="col home-menu-item" nav-direction="swap" ui-sref="page.donations" ng-click="closeHome()">
           <img src="img/donations.svg"/>
         </div>
-        <div class="col" nav-direction="swap" ui-sref="page.settings" ng-click="closeHome()">
-          <img src="img/settings.svg"/>
+        <div class="col home-menu-item" nav-direction="swap" ui-sref="page.settings" ng-click="closeHome()">
+          <img src="img/now-playing.svg"/>
         </div>
       </div>
   </ion-content>
