@@ -7,6 +7,8 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('iofio', [
+  'iofio-player',
+  'restangular',
   'ionic',
   'nvd3',
   'ionic.service.core',

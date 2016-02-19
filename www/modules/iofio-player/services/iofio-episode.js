@@ -5,7 +5,7 @@ angular
 IofioEpisode.$inject = []
 function IofioEpisode() {
   var Episode = function (info) {
-    this.title = info.title[0];
+    this.name = info.title[0];
     this.date = new Date(info.pubDate[0]);
     this.duration = info['itunes:duration'][0];
     this.image = info['itunes:image'][0].$.href;

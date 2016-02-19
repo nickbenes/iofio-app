@@ -1,7 +1,7 @@
 /* global angular */
 angular.module('iofio')
 
-  .controller('MainCtrl', function($sce, $ionicModal, $state, $scope, MockData) {
+  .controller('MainCtrl', function($sce, $http, Restangular, $ionicModal, $state, $scope, MockData, IofioEpisode, IofioPodcast, IofioPlaylist, IofioPodcastList) {
     var scope = $scope;
     var donations = scope.donations = MockData.donations();
     var player = scope.API = null;
@@ -9,6 +9,15 @@ angular.module('iofio')
       player = scope.API = API;
     }
     
+    scope.Episode = IofioEpisode;
+    scope.Podcast = IofioPodcast;
+    scope.Playlist = IofioPlaylist;
+    scope.PodcastList = IofioPodcastList;
+    scope.MockData = MockData;
+    scope.Restangular = Restangular;
+    scope.$http = $http;
+    scope.foo = Restangular.allUrl('googlers', 'http://www.google.com/').getList().$object;
+
     scope.back = function () {
       player.seekTime(0);
     };

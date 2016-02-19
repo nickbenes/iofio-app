@@ -13,6 +13,8 @@
     "videogular-buffering": "~1.4.0",
     "videogular-overlay-play": "~1.4.0",
     "videogular-poster": "~1.4.0",
-    "angular-nvd3": "~1.0.5"
+    "angular-nvd3": "~1.0.5",
+    "restangular": "~1.5.1",
+    "lodash": "~3.10.1"
   }
 }
