@@ -24,7 +24,7 @@
     <ion-spinner></ion-spinner>  
   </ion-nav-view>
   
-  <ion-footer-bar class="bar-dark">
+  <ion-footer-bar ng-class="{'bar-dark': true, 'bar-tall': isPlayer()}">
     <div class="videogular-container">
       <videogular vg-player-ready="onPlayerReady($API)" vg-theme="config.theme">
         <vg-media class="audio" vg-type="audio" vg-src="config.sources">
@@ -44,13 +44,14 @@
               <button ng-click="scrubfwd" class="button button-clear icon iofio-scrubfwd"></button>
               <button ng-click="forward" class="button button-clear icon iofio-forward"></button>
             </iofio-forward>
-            <button class="button button-clear icon"></button>
-          </div>
-          <div class="vg-row">
-            <vg-volume ng-if="$state.current.name === 'page.nowPlaying'">
+            <vg-volume>
               <vg-mute-button></vg-mute-button>
-              <vg-volume-bar></vg-volume-bar>
             </vg-volume>
+          </div>
+          <div class="vg-row" ng-if="isPlayer()">
+            <vg-scrub-bar>
+              <vg-scrub-bar-buffer></vg-scrub-bar-buffer>
+            </vg-scrub-bar>
           </div>
         </vg-controls>
   

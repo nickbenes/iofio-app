@@ -222,6 +222,10 @@ iofio-green {
   align-content: center;
 }
 
+.bar-tall {
+  height: 100px;
+}
+
 @media screen and (max-width: 360px) {
   .home-menu .home-menu-item {
     max-width: 128px;

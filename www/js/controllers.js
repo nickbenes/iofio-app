@@ -76,6 +76,10 @@ angular.module('iofio')
       title: scope.podcast.title[0] + ": " + scope.episode.name,
     };
     
+    scope.isPlayer = function () {
+      return $state.current.name === 'page.player';
+    }
+    
     scope.config = {
       sources: [
         {src: $sce.trustAsResourceUrl("audio/insideoutside-ep32.mp3"), type: "audio/mpeg"}
