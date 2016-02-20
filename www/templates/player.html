@@ -1,6 +1,16 @@
 <ion-view>
   <ion-content class="iofio-player iofio-gradient">
-    <ion-pane back-img="{{ episode.image }}">
+    <ion-pane back-img="{{ episode.image }}" ng-click="addShowNote()">
+      <div class="show-notes-container">
+      <div ng-repeat="note in showNotes" class="card">
+        <div class="item item-divider">
+          {{note.header}}
+        </div>
+        <div class="item item-text-wrap">
+          {{note.content}}
+        </div>
+      </div>
+      </div>
     </ion-pane>
   </ion-content>
 </ion-view>

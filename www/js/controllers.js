@@ -9,6 +9,21 @@ angular.module('iofio')
       player = scope.API = API;
     }
     
+    scope.showNotes = [];
+    
+    function addShowNote() {
+      scope.showNotes.push({
+        header: 'This is a header',
+        content: 'This is some content. It could be long or short, or a link or a picture. Or even an ad.'
+      });
+      scope.showNotes.push({
+        header: 'Another show note',
+        content: 'More content.'
+      });
+    }
+
+    scope.addShowNote = addShowNote;
+    
     scope.back = function () {
       player.seekTime(0);
     };
@@ -38,28 +53,28 @@ angular.module('iofio')
     donations.options = {
       chart: {
                 type: 'pieChart',
-                height: 350,
-                width: 350,
+                height: 300,
+                width: 300,
                 x: function(d){return d.name;},
                 y: function(d){return +d.share;},
-                showLabels: true,
+                showLabels: false,
                 duration: 500,
                 labelThreshold: 0.05,
                 labelType: 'percent',
                 donut: true,
                 donutRatio: 0.7,
-                donutLabelsOutside: true,
+                donutLabelsOutside: false,
                 margin: {
                   top: 0,
                   bottom: 0,
                   left: 0,
-                  right: 5
+                  right: 0
                 },
                  legend: {
                     margin: {
                         top: 0,
-                        right: 35,
-                        bottom: 5,
+                        right: 0,
+                        bottom: 0,
                         left: 0
                     }
                 }
@@ -69,7 +84,7 @@ angular.module('iofio')
     scope.itunes = MockData.itunes();
     scope.podcast = MockData.podcast();
     scope.episode = MockData.episode();
-    
+        
     scope.$state = $state;
 
     scope.player = {

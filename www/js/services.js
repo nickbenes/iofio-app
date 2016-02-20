@@ -10,6 +10,12 @@ function MockData() {
     donations: donations
   };
   
+  function showNotes() {
+    return [{
+      
+    }];
+  }
+  
   function itunes() {
     return {
       "wrapperType": "track",
