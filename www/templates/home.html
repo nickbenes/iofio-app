@@ -5,7 +5,9 @@
   </ion-header-bar>
   
   <ion-content class="home-menu">
-      <div class="row">
+    <div class="row home-container">
+      <div class="col">
+      <div class="row horizontal-center">
         <div class="col home-menu-item" nav-direction="swap" ui-sref="page.playlist" ng-click="closeHome()">
           <img src="img/podcasts.svg"/>
         </div>
@@ -13,13 +15,15 @@
           <img src="img/featured.svg"/>
         </div>
       </div>
-      <div class="row">
+      <div class="row horizontal-center">
         <div class="col home-menu-item" nav-direction="swap" ui-sref="page.donations" ng-click="closeHome()">
           <img src="img/donations.svg"/>
         </div>
-        <div class="col home-menu-item" nav-direction="swap" ui-sref="page.settings" ng-click="closeHome()">
+        <div class="col home-menu-item" nav-direction="swap" ui-sref="page.player" ng-click="closeHome()">
           <img src="img/now-playing.svg"/>
         </div>
       </div>
+      </div>
+    </div>
   </ion-content>
 </ion-modal-view>

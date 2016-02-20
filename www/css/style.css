@@ -98,7 +98,7 @@ text {
 }
 
 .modal {
-  background-color: rgba(22,22,22,0.7);  
+  background-color: rgba(22,22,22,0.9);  
 }
 
 .modal .bar-header {
@@ -203,6 +203,33 @@ iofio-green {
   background: linear-gradient(135deg,  #b5bdc8 0%,#558772 28%,#1d3342 100%);
 }
 
-.home-menu .home-menu-item {
-  width: 100%;
+.row.horizontal-center {
+  justify-content: center;
+}
+
+.row.vertical-center {
+  align-items: center;
+  align-content: center;
+}
+
+.home-menu .scroll {
+  height: 95%;
+}
+
+.home-menu .home-container {
+  height: 100%;
+  align-items: center;
+  align-content: center;
+}
+
+@media screen and (max-width: 360px) {
+  .home-menu .home-menu-item {
+    max-width: 128px;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .home-menu .home-menu-item {
+    max-width: 128px;
+  }
 }
