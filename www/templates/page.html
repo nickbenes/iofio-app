@@ -51,6 +51,8 @@
           <div class="vg-row" ng-if="isPlayer()">
             <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
             <vg-scrub-bar>
+              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+              <vg-scrub-bar-cue-points vg-cue-points="config.cuePoints.notes"></vg-scrub-bar-cue-points>
               <vg-scrub-bar-buffer></vg-scrub-bar-buffer>
             </vg-scrub-bar>
             <vg-time-display>{{ totalTime | date:'mm:ss' }}</vg-time-display>

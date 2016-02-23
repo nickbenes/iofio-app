@@ -43,22 +43,22 @@ function MainCtrl($sce, $ionicModal, $state, $scope, MockData) {
     scope.onLeave = function (currentTime, timeLapse, params) { 
       params.completed = false;
       params.active = false;
-      logShowNoteAction(params, 'moved before', currentTime);
+      // logShowNoteAction(params, 'moved before', currentTime);
     }
     
     scope.onComplete = function (currentTime, timeLapse, params) { 
       params.completed = true;
       params.active = false;
-      logShowNoteAction(params, 'completed', currentTime);
+      // logShowNoteAction(params, 'completed', currentTime);
     }
     
     scope.onUpdate = function (currentTime, timeLapse, params) {
       if (!params.active) {
         params.completed = false;
         params.active = true;
-        logShowNoteAction(params, 'activated', currentTime);
+        // logShowNoteAction(params, 'activated', currentTime);
       }
-      logShowNoteAction(params, 'updating', currentTime);
+      // logShowNoteAction(params, 'updating', currentTime);
     }
     
     function logShowNoteAction(params, action, time) {

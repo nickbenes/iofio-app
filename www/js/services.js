@@ -15,21 +15,21 @@ function MockData() {
     return [{
       type: 'ad',
       start: 2,
-      stop: 5,
+      stop: 10,
       href: 'http://iofio.com',
       title: 'Welcome to iofio'
     },
     {
       type: 'link',
       start: 6,
-      stop: 8,
+      stop: 15,
       href: 'http://google.com',
       title: 'Heading to Google...'
     },
     {
       type: 'img',
-      start: 10,
-      stop: 15,
+      start: 600,
+      stop: 1200,
       title: 'Shop at Target!',
       src: 'https://logo.clearbit.com/target.com',
       href: 'http://target.com'
