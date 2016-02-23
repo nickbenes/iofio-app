@@ -7,12 +7,32 @@ function MockData() {
     itunes: itunes,
     podcast: podcast,
     episode: episode,
-    donations: donations
+    donations: donations,
+    showNotes: showNotes
   };
   
   function showNotes() {
     return [{
-      
+      type: 'ad',
+      start: 2,
+      stop: 5,
+      href: 'http://iofio.com',
+      title: 'Welcome to iofio'
+    },
+    {
+      type: 'link',
+      start: 6,
+      stop: 8,
+      href: 'http://google.com',
+      title: 'Heading to Google...'
+    },
+    {
+      type: 'img',
+      start: 10,
+      stop: 15,
+      title: 'Shop at Target!',
+      src: 'https://logo.clearbit.com/target.com',
+      href: 'http://target.com'
     }];
   }
   

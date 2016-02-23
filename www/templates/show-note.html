@@ -1,8 +1,11 @@
-<div class="card">
+<a class="card" ng-href="{{iofioDataProvider.href}}" target="blank">
   <div class="item item-divider cardHead">
-    {{iofioDataProvider.header}}
+    {{iofioDataProvider.title}}
   </div>
   <div class="item item-text-wrap cardCon">
     {{iofioDataProvider.content}}
   </div>
-</div>
+  <div ng-if="iofioDataProvider.type === 'img'">
+    <img ng-src="{{iofioDataProvider.src}}" />
+  </div>
+</a>

@@ -12,14 +12,7 @@ angular.module('iofio')
     scope.showNotes = [];
     
     function addShowNote() {
-      scope.showNotes.push({
-        header: 'This is a header',
-        content: 'This is some content. It could be long or short, or a link or a picture. Or even an ad.'
-      });
-      scope.showNotes.push({
-        header: 'Another show note',
-        content: 'More content.'
-      });
+      scope.showNotes = scope.showNotes.concat(MockData.showNotes());
     }
 
     scope.addShowNote = addShowNote;
