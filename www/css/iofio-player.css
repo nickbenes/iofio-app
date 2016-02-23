@@ -22,7 +22,7 @@ videogular .vg-row, [videogular] .vg-row {
   height: 50px;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0); 
 }
 
 videogular button {
