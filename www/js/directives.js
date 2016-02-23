@@ -1,5 +1,6 @@
 angular.module('iofio')
-  .directive('backImg', backImg);
+  .directive('backImg', backImg)
+  .directive('iofioNote', iofioNote);
   
 function backImg() {
   return function(scope, element, attrs){
@@ -13,4 +14,13 @@ function backImg() {
           });
       });
   };
+}
+
+function iofioNote() {
+  return {
+    scope: {
+      iofioDataProvider: '='
+    },
+    templateUrl: 'templates/show-note.html'
+  }
 }
