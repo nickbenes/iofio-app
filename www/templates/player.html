@@ -1,7 +1,13 @@
 <ion-view>
-  <ion-content back-img="{{ episode.image }}" ng-click="addShowNote()" class="iofio-player iofio-gradient">
+  <ion-content back-img="{{ episode.image }}" class="iofio-player">
       <div class="show-notes-container cardMar">
-        <iofio-note iofio-data-provider="note" ng-repeat="note in showNotes">
+        <iofio-note iofio-data-provider="note" 
+          ng-show="note.params.active" 
+          ng-class="{
+            'show-note-active': note.params.active,
+            'show-note-completed': note.params.completed
+          }"
+          ng-repeat="note in config.cuePoints.notes">
         </iofio-note>
       </div>
   </ion-content>
