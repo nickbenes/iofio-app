@@ -1,11 +1,13 @@
-<a class="card" ng-href="{{iofioDataProvider.href}}" target="blank">
-  <div class="item item-divider cardHead">
-    {{iofioDataProvider.title}}
-  </div>
-  <div class="item item-text-wrap cardCon">
-    {{iofioDataProvider.content}}
-  </div>
-  <div ng-if="iofioDataProvider.type === 'img'">
-    <img ng-src="{{iofioDataProvider.src}}" />
-  </div>
+<a ng-href="{{iofioDataProvider.href}}" target="blank">
+	<div>
+		<div ng-if="iofioDataProvider.type === 'img'">
+	    <img class="imgFloat" ng-src="{{iofioDataProvider.src}}" />
+	  </div>
+	  <div class="item item-divider cardCon">
+	    {{iofioDataProvider.title}}
+	  </div>
+	  <div class="card-margin item item-text-wrap cardCon2 rightBoard">
+	    {{iofioDataProvider.content}}
+	  </div>
+	</div>
 </a>

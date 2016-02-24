@@ -36,33 +36,65 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
-.item{
-  border-width: 0px;
+.imgFloat{
+  width: 100px !important;
+  float: left;
+  height:100px;
+   border-top: 1px;
+   border-left: 1px;
+   border-bottom: 1px;
+   border-style: solid;
+   border-color: rgba(200, 200, 200, 0.8);
+   background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 10px 10px 10px;
+  margin-right: 1px;
+  margin-top: -1px;
 }
 
 .cardMar {
   margin-top: 25%;
   margin-left: 10%;
   margin-right: 10%;
+
+}
+.borderLeft{
+  border-left: 5px;
 }
 
+.card-margin{
+  margin-left: 1px;
+}
 .cardHead {
-  background: #444;
-  background: -webkit-linear-gradient(#444, #222); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#444, #222); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#444, #222); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#444, #222); /* Standard syntax */
   color: white;
+  float: left;
+  width: 100px;
+  height:100px;
+  text-align: center;
 }
 
 .cardCon {
-  background: black;
-  background: -webkit-linear-gradient(#222, black); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#222, black); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#222, black); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#222, black); /* Standard syntax */
   color: white;
   position: static;
+  float: left;
+  width: 159px;
+  height: 100px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-width: 1px 0px 1px 1px !important;
+  border-color: rgba(200, 200, 200, 0.8);
+
+}
+
+.cardCon2 {
+  color: white;
+  position: static;
+  float: left;
+  width: 159px;
+  height: 100px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-width: 1px 1px 1px 0px;
+  border-color: rgba(200, 200, 200, 0.8);
 }
 
 .iofio-back:before,
