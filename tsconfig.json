@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "system"
+  },
+  "files": [
+    "typings/tsd.d.ts"
+  ]
+}
