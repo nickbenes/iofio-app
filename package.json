@@ -23,6 +23,7 @@
     "gulp-jasmine": "^2.1.0",
     "gulp-karma": "0.0.4",
     "gulp-protractor": "^1.0.0",
+    "gulp-tsc": "^1.1.5",
     "gulp-util": "^2.2.14",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.9",
@@ -35,6 +36,8 @@
     "phantomjs": "^1.9.18",
     "protractor": "^2.2.0",
     "shelljs": "^0.3.0",
+    "typescript": "^1.8.9",
+    "typings":"^0.7.11",
     "zombie": "^2.5.1"
   },
   "cordovaPlugins": [

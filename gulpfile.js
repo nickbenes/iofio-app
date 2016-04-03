@@ -9,9 +9,12 @@ var sh = require('shelljs');
 var connect = require('gulp-connect');
 var karma = require('gulp-karma');
 var protractor = require('gulp-protractor').protractor;
+var typescript = require('gulp-tsc');
 
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass: ['./scss/**/*.scss'],
+  srcIofioClasses: ['./src/iofio-classes/*.ts'],
+  srcJs: ['./src/js/*.ts']
 };
 
 gulp.task('sass', function(done) {
@@ -28,8 +31,26 @@ gulp.task('sass', function(done) {
     .on('end', done);
 });
 
+gulp.task('compileIofio', function(){
+  gulp.src(paths.srcIofioClasses)
+    .pipe(typescript({
+      emitError: false
+    }))
+    .pipe(gulp.dest('www/modules/iofio-classes/'));
+});
+
+gulp.task('compileJs', function(){
+  gulp.src(paths.srcJs)
+    .pipe(typescript({
+      emitError: false
+    }))
+    .pipe(gulp.dest('www/js/'));
+});
+
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.srcIofioClasses,['compileIofio']);
+  gulp.watch(paths.srcJs,['compileJs']);
 });
 
 gulp.task('install', ['git-check'], function() {
