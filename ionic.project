@@ -1,5 +1,5 @@
 {
   "name": "podcast-player",
   "app_id": "86725bc2",
-  "gulpStartupTasks": ["sass","compileIofio","compileJs","watch"]
+  "gulpStartupTasks": ["sass","ts","watch"]
 }

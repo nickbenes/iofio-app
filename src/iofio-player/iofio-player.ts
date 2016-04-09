@@ -1,4 +1,7 @@
 angular
+  .module('iofio-player',[]);
+
+angular
   .module('iofio-player')
   .service('IofioPlayer', IofioPlayer);
 

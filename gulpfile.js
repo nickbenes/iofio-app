@@ -7,12 +7,12 @@ var cleanCss = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 var connect = require('gulp-connect');
-var typescript = require('gulp-tsc');
+var ts = require('gulp-typescript');
+var tsProject = ts.createProject('tsconfig.json');
 
 var paths = {
   sass: ['./scss/**/*.scss'],
-  srcIofioClasses: ['./src/iofio-classes/*.ts'],
-  srcJs: ['./src/js/*.ts']
+  ts: ['./src/**/*.ts']
 };
 
 gulp.task('sass', function(done) {
@@ -29,26 +29,16 @@ gulp.task('sass', function(done) {
     .on('end', done);
 });
 
-gulp.task('compileIofio', function(){
-  gulp.src(paths.srcIofioClasses)
-    .pipe(typescript({
-      emitError: false
-    }))
-    .pipe(gulp.dest('www/modules/iofio-classes/'));
-});
-
-gulp.task('compileJs', function(){
-  gulp.src(paths.srcJs)
-    .pipe(typescript({
-      emitError: false
-    }))
-    .pipe(gulp.dest('www/js/'));
+gulp.task('ts', function(){
+  var tsResult = tsProject.src('./src/')
+    .pipe(ts(tsProject));
+  
+  return tsResult.js.pipe(gulp.dest('./www/js/'));
 });
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
-  gulp.watch(paths.srcIofioClasses,['compileIofio']);
-  gulp.watch(paths.srcJs,['compileJs']);
+  gulp.watch(paths.ts,['ts']);
 });
 
 gulp.task('install', ['git-check'], function() {
