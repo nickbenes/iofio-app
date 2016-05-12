@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "./www/js",
+    "module": "system",
+    "sourceMap": false,
+    "noEmitOnError": false,
+    "rootDir": "./src",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules",
+    "www/lib",
+    "typings/main",
+    "typings/main.d.ts"
+  ]
+}

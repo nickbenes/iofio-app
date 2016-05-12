@@ -2,16 +2,36 @@
 angular.module('iofio')
   .controller('MainCtrl', MainCtrl);
 
-MainCtrl.$inject = ['$sce', '$ionicModal', '$state', '$scope', 'MockData'];
-function MainCtrl($sce, $ionicModal, $state, $scope, MockData) {
+MainCtrl.$inject = ['$sce', '$http', 'Restangular', '$ionicModal', '$state', '$scope', 'MockData', 'IofioEpisode', 'IofioPodcast', 'IofioPlaylist', 'IofioPodcastList'];
+function MainCtrl($sce, $http, Restangular, $ionicModal, $state, $scope, MockData, IofioEpisode, IofioPodcast, IofioPlaylist, IofioPodcastList) {
     var scope = $scope;
     var donations = scope.donations = MockData.donations();
     var player = scope.API = null;
-    scope.onPlayerReady = function (API) {
-      player = scope.API = API;
-    }
     
-    scope.init = function init() {
+    scope.Episode = IofioEpisode;
+    scope.Podcast = IofioPodcast;
+    scope.Playlist = IofioPlaylist;
+    scope.PodcastList = IofioPodcastList;
+    scope.MockData = MockData;
+    scope.Restangular = Restangular;
+    scope.$http = $http;
+
+    scope.onPlayerReady = onPlayerReady;
+    scope.init = init;
+    scope.onLeave = onLeave;
+    scope.onComplete = onComplete;
+    scope.onUpdate = onUpdate;
+    
+    scope.itunes = MockData.itunes();
+    scope.podcast = MockData.podcast();
+    scope.episode = MockData.episode(); 
+    scope.$state = $state;
+
+    scope.player = {
+      title: scope.podcast.title[0] + ": " + scope.episode.name,
+    };
+
+    function init() {
       var notes = MockData.showNotes().map(prepNote);
       
       scope.config = {
@@ -26,6 +46,10 @@ function MainCtrl($sce, $ionicModal, $state, $scope, MockData) {
       };
     }
 
+    function onPlayerReady(API) {
+      player = scope.API = API;
+    }
+    
     function prepNote(note, idx) {
       note.timeLapse = {
         start: note.start,
@@ -40,19 +64,19 @@ function MainCtrl($sce, $ionicModal, $state, $scope, MockData) {
       return note;
     }
     
-    scope.onLeave = function (currentTime, timeLapse, params) { 
+    function onLeave(currentTime, timeLapse, params) { 
       params.completed = false;
       params.active = false;
       // logShowNoteAction(params, 'moved before', currentTime);
     }
     
-    scope.onComplete = function (currentTime, timeLapse, params) { 
+    function onComplete(currentTime, timeLapse, params) { 
       params.completed = true;
       params.active = false;
       // logShowNoteAction(params, 'completed', currentTime);
     }
     
-    scope.onUpdate = function (currentTime, timeLapse, params) {
+    function onUpdate(currentTime, timeLapse, params) {
       if (!params.active) {
         params.completed = false;
         params.active = true;
@@ -89,17 +113,7 @@ function MainCtrl($sce, $ionicModal, $state, $scope, MockData) {
     scope.forward = function () {
       player.seekTime(player.totalTime);
     }
-       
-    scope.itunes = MockData.itunes();
-    scope.podcast = MockData.podcast();
-    scope.episode = MockData.episode();
-        
-    scope.$state = $state;
-
-    scope.player = {
-      title: scope.podcast.title[0] + ": " + scope.episode.name,
-    };
-    
+           
     scope.isPlayer = function () {
       return $state.current.name === 'page.player';
     }

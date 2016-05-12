@@ -2,7 +2,7 @@ angular
   .module('iofio-player')
   .service('IofioPodcastList', IofioPodcastList);
 
-IofioPlayer.$inject = ['$http']
+IofioPodcastList.$inject = ['$http']
 function IofioPodcastList($http) {
   var list = [];
   var currentId = 0;

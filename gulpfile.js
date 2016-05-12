@@ -3,15 +3,16 @@ var gutil = require('gulp-util');
 var bower = require('bower');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
-var minifyCss = require('gulp-minify-css');
+var cleanCss = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 var connect = require('gulp-connect');
-var karma = require('gulp-karma');
-var protractor = require('gulp-protractor').protractor;
+var ts = require('gulp-typescript');
+var tsProject = ts.createProject('tsconfig.json');
 
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass: ['./scss/**/*.scss'],
+  ts: ['./src/**/*.ts']
 };
 
 gulp.task('sass', function(done) {
@@ -20,7 +21,7 @@ gulp.task('sass', function(done) {
       errLogToConsole: true
     }))
     .pipe(gulp.dest('./www/css/'))
-    .pipe(minifyCss({
+    .pipe(cleanCss({
       keepSpecialComments: 0
     }))
     .pipe(rename({ extname: '.min.css' }))
@@ -28,8 +29,16 @@ gulp.task('sass', function(done) {
     .on('end', done);
 });
 
+gulp.task('ts', function(){
+  var tsResult = tsProject.src('./src/')
+    .pipe(ts(tsProject));
+  
+  return tsResult.js.pipe(gulp.dest('./www/js/'));
+});
+
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.ts,['ts']);
 });
 
 gulp.task('install', ['git-check'], function() {
@@ -58,36 +67,5 @@ gulp.task('connect', function() {
     port: '8000'
   });
 });
-
-gulp.task('unit', function (done) {
-  // From http://jbavari.github.io/blog/2014/06/11/unit-testing-angularjs-services/
-  // Be sure to return the stream
-  // NOTE: Using the fake './foobar' so as to run the files listed in karma.conf.js
-  //  instead of what was passed to gulp.src
-  return gulp.src('./foobar')
-    .pipe(karma({
-      configFile: __dirname + '/tests/karma.conf.js',
-      action: 'run'
-    }))
-    .on('error', function (err) {
-      // Make sure failed tests cause gulp to exit non-zero
-      console.log(err);
-      this.emit('end'); // instead of erroring the stream, end it
-    });
-});
-
-gulp.task('autotest', function () {
-  return gulp.watch([__dirname + 'www/js/**/*.js', __dirname + 'tests/unit/spec/**/*.js'], ['unit']);
-})
-
-gulp.task('e2e', function(done) {
-  var args = ['--baseUrl', 'http://127.0.0.1:8000'];
-  gulp.src(['./tests/e2e/*.js'])
-    .pipe(protractor({
-      configFile: 'tests/protractor.conf.js',
-      args: args
-    }))
-    .on('error', function(e) { throw e; });
-})
 
 gulp.task('default', ['connect']);

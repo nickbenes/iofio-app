@@ -1,0 +1,31 @@
+{
+  "name": "iofio-podcast-app",
+  "version": false,
+  "ambientDependencies": {
+    "BatteryStatus": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/BatteryStatus.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "Camera": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/Camera.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "Contacts": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/Contacts.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "Device": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/Device.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "DeviceMotion": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/DeviceMotion.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "DeviceOrientation": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/DeviceOrientation.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "Dialogs": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/Dialogs.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "FileSystem": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/FileSystem.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "FileTransfer": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/FileTransfer.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "Globalization": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/Globalization.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "InAppBrowser": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/InAppBrowser.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "Keyboard": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/Keyboard.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "Media": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/Media.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "MediaCapture": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/MediaCapture.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "NetworkInformation": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/NetworkInformation.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "Push": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/Push.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "Splashscreen": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/Splashscreen.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "StatusBar": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/StatusBar.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "Vibration": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/Vibration.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "WebSQL": "github:DefinitelyTyped/DefinitelyTyped/cordova/plugins/WebSQL.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "angular": "registry:dt/angular#1.5.0+20160328125810",
+    "cordova": "github:DefinitelyTyped/DefinitelyTyped/cordova/cordova.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "ionic": "github:DefinitelyTyped/DefinitelyTyped/ionic/ionic.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d"
+  }
+}

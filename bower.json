@@ -2,7 +2,7 @@
   "name": "HelloIonic",
   "private": "true",
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.1.0",
+    "ionic": "driftyco/ionic-bower#1.2.4",
     "ionic-service-core": "~0.1.10"
   },
   "dependencies": {
@@ -13,6 +13,8 @@
     "videogular-buffering": "~1.4.0",
     "videogular-overlay-play": "~1.4.0",
     "videogular-poster": "~1.4.0",
-    "angular-nvd3": "~1.0.5"
+    "angular-nvd3": "~1.0.5",
+    "restangular": "~1.5.1",
+    "lodash": "~3.10.1"
   }
 }
