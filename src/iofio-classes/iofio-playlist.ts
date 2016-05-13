@@ -4,29 +4,32 @@ angular
 
 IofioPlaylist.$inject = ['$http']
 function IofioPlaylist($http) {
-  var playlist = [];
-  var currentId = 0;
-  var service = {
-    addToPlaylist: addToPlaylist,
-    getPlaylist: getPlaylist,
-    clearPlaylist: clearPlaylist,
-    getInfo: getInfo,
-    nextEpisode: nextEpisode,
-    previousEpisode: previousEpisode
-  }
-  
-  function addToPlaylist(songs) {
-    for (var key in songs) {
-      if (songs.hasOwnProperty(key) && angular.isObject(songs[key])) {
-        playlist.push(songs[key]);
-      }
+  class Playlist {
+    //playlist: [IofioEpisode];
+    playlist: [any];
+    currentId: number;
+    
+    constructor(){
+      this.playlist = [];
+      this.currentId = 0;
     }
-    return playlist;
+    
+    addToPlaylist(songs) {
+      var self=this;
+      for (var key in songs) {
+        if (songs.hasOwnProperty(key) && angular.isObject(songs[key])) {
+          self.playlist.push(songs[key]);
+        }
+      }
+      return self.playlist;
+    }
+    
+    getPlaylist() {
+      return this.playlist;
+    }
   }
   
-  function getPlaylist() {
-    return playlist;
-  }
+  return Playlist;
   
   function clearPlaylist() {
     playlist = [];
@@ -59,5 +62,4 @@ function IofioPlaylist($http) {
     return playlist[currentId];
   }
   
-  return service;
 }
