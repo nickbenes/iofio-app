@@ -3,54 +3,53 @@ angular
     .service('IofioPlaylist', IofioPlaylist);
 IofioPlaylist.$inject = ['$http'];
 function IofioPlaylist($http) {
-    var playlist = [];
-    var currentId = 0;
-    var service = {
-        addToPlaylist: addToPlaylist,
-        getPlaylist: getPlaylist,
-        clearPlaylist: clearPlaylist,
-        getInfo: getInfo,
-        nextEpisode: nextEpisode,
-        previousEpisode: previousEpisode
-    };
-    function addToPlaylist(songs) {
-        for (var key in songs) {
-            if (songs.hasOwnProperty(key) && angular.isObject(songs[key])) {
-                playlist.push(songs[key]);
+    var Playlist = (function () {
+        function Playlist() {
+            //playlist: [IofioEpisode];
+            this.playlist = [];
+            this.currentId = 0;
+        }
+        Playlist.prototype.addToPlaylist = function (songs) {
+            var self = this;
+            for (var key in songs) {
+                if (songs.hasOwnProperty(key) && angular.isObject(songs[key])) {
+                    self.playlist.push(songs[key]);
+                }
             }
-        }
-        return playlist;
-    }
-    function getPlaylist() {
-        return playlist;
-    }
-    function clearPlaylist() {
-        playlist = [];
-        return playlist;
-    }
-    function getInfo(id) {
-        if (typeof id === 'undefined') {
-            id = currentId;
-        }
-        return playlist[currentId];
-    }
-    function nextEpisode() {
-        if (currentId + 2 < playlist.length) {
-            currentId++;
-        }
-        else {
-            currentId = playlist.length - 1;
-        }
-        return playlist[currentId];
-    }
-    function previousEpisode() {
-        if (currentId > 0) {
-            currentId--;
-        }
-        else {
-            currentId = 0;
-        }
-        return playlist[currentId];
-    }
-    return service;
+            return self.playlist;
+        };
+        Playlist.prototype.getPlaylist = function () {
+            return this.playlist;
+        };
+        Playlist.prototype.clearPlaylist = function () {
+            this.playlist = [];
+            return this.playlist;
+        };
+        Playlist.prototype.getInfo = function (id) {
+            if (typeof id === 'undefined') {
+                id = this.currentId;
+            }
+            return this.playlist[this.currentId];
+        };
+        Playlist.prototype.nextEpisode = function () {
+            if (this.currentId + 2 < this.playlist.length) {
+                this.currentId++;
+            }
+            else {
+                this.currentId = this.playlist.length - 1;
+            }
+            return this.playlist[this.currentId];
+        };
+        Playlist.prototype.previousEpisode = function () {
+            if (this.currentId > 0) {
+                this.currentId--;
+            }
+            else {
+                this.currentId = 0;
+            }
+            return this.playlist[this.currentId];
+        };
+        return Playlist;
+    }());
+    return Playlist;
 }

@@ -6,14 +6,9 @@ IofioPlaylist.$inject = ['$http']
 function IofioPlaylist($http) {
   class Playlist {
     //playlist: [IofioEpisode];
-    playlist: [any];
-    currentId: number;
-    
-    constructor(){
-      this.playlist = [];
-      this.currentId = 0;
-    }
-    
+    playlist: any[] = [];
+    currentId: number = 0;
+        
     addToPlaylist(songs) {
       var self=this;
       for (var key in songs) {
@@ -27,39 +22,37 @@ function IofioPlaylist($http) {
     getPlaylist() {
       return this.playlist;
     }
+    
+    clearPlaylist() {
+      this.playlist = [];
+      return this.playlist;
+    }
+    
+    getInfo(id) {
+      if (typeof id === 'undefined') {
+        id = this.currentId;
+      }
+      return this.playlist[this.currentId];
+    }
+    
+    nextEpisode() {
+      if (this.currentId + 2 < this.playlist.length) {
+        this.currentId++;
+      } else {
+        this.currentId = this.playlist.length - 1;
+      }
+      return this.playlist[this.currentId];
+    }
+    
+    previousEpisode() {
+      if (this.currentId > 0) {
+        this.currentId--;
+      } else {
+        this.currentId = 0;
+      }
+      return this.playlist[this.currentId];
+    }
   }
   
   return Playlist;
-  
-  function clearPlaylist() {
-    playlist = [];
-    return playlist;
-  }
-  
-  function getInfo(id) {
-    if (typeof id === 'undefined') {
-      id = currentId;
-    }
-    
-    return playlist[currentId];
-  }
-  
-  function nextEpisode() {
-    if (currentId + 2 < playlist.length) {
-      currentId++;
-    } else {
-      currentId = playlist.length - 1;
-    }
-    return playlist[currentId];
-  }
-  
-  function previousEpisode() {
-    if (currentId > 0) {
-      currentId--;
-    } else {
-      currentId = 0;
-    }
-    return playlist[currentId];
-  }
-  
 }
