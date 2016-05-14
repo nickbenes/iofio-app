@@ -9766,6 +9766,60 @@ h1, h2, h3 {
   font-family: Antenna;
   font-weight: bold; }
 
+.imgFloat {
+  width: 100px !important;
+  float: left;
+  height: 100px;
+  border-top: 1px;
+  border-left: 1px;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: rgba(200, 200, 200, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 10px 10px 10px;
+  margin-right: 1px;
+  margin-top: -1px; }
+
+.cardMar {
+  margin-top: 25%;
+  margin-left: 10%;
+  margin-right: 10%; }
+
+.borderLeft {
+  border-left: 5px; }
+
+.card-margin {
+  margin-left: 1px; }
+
+.cardHead {
+  color: white;
+  float: left;
+  width: 100px;
+  height: 100px;
+  text-align: center; }
+
+.cardCon {
+  color: white;
+  position: static;
+  float: left;
+  width: 159px;
+  height: 100px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-width: 1px 0px 1px 1px !important;
+  border-color: rgba(200, 200, 200, 0.8); }
+
+.cardCon2 {
+  color: white;
+  position: static;
+  float: left;
+  width: 159px;
+  height: 100px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-width: 1px 1px 1px 0px;
+  border-color: rgba(200, 200, 200, 0.8); }
+
 .iofio-back:before,
 .iofio-forward:before,
 .iofio-scrubbk:before,
@@ -9822,7 +9876,7 @@ text {
   fill: antiquewhite; }
 
 .modal {
-  background-color: rgba(22, 22, 22, 0.7); }
+  background-color: rgba(22, 22, 22, 0.9); }
 
 .modal .bar-header {
   background-color: #2c2c2c; }
@@ -9840,7 +9894,7 @@ text {
 .marquee {
   overflow: hidden;
   white-space: nowrap;
-  width: 300px;
+  width: 230px;
   margin: 0 auto;
   box-sizing: border-box; }
 
@@ -9906,3 +9960,29 @@ text {
 
 iofio-green {
   background: linear-gradient(135deg, #b5bdc8 0%, #558772 28%, #1d3342 100%); }
+
+.row.horizontal-center {
+  justify-content: center; }
+
+.row.vertical-center {
+  align-items: center;
+  align-content: center; }
+
+.home-menu .scroll {
+  height: 95%; }
+
+.home-menu .home-container {
+  height: 100%;
+  align-items: center;
+  align-content: center; }
+
+.bar-tall {
+  height: 100px; }
+
+@media screen and (max-width: 360px) {
+  .home-menu .home-menu-item {
+    max-width: 128px; } }
+
+@media screen and (max-height: 400px) {
+  .home-menu .home-menu-item {
+    max-width: 128px; } }
